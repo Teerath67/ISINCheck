@@ -43,7 +43,11 @@ for code in codes:
         somme = sum(step3)
         gettenth = (int(str(somme)[0]) + 1) * 10
 
-        finalNumber = gettenth - somme
+        if (somme % 10 == 0):
+            finalNumber = 0
+        else:
+            finalNumber = gettenth - somme
+        
 
         if finalNumber == verificationDigit:
             print("Le code ISIN " + actCode + " est valide !")
