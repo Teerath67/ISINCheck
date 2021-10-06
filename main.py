@@ -1,4 +1,5 @@
 import os
+import math as Math
 
 codesFile = open("Isincode.txt")
 codes = codesFile.readlines()
@@ -41,7 +42,7 @@ for code in codes:
                 step3.append(number)
         
         somme = sum(step3)
-        gettenth = (int(str(somme)[0]) + 1) * 10
+        gettenth = Math.ceil(somme/10) * 10
 
         if (somme % 10 == 0):
             finalNumber = 0
